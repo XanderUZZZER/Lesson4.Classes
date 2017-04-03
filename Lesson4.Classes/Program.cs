@@ -26,8 +26,16 @@ namespace Lesson4.Classes
 
             date = DateTime.Parse("04/05/99 14:54");
             Console.WriteLine(date);
-
-
+            TimeSpan time = DateTime.Now - date;
+            Console.WriteLine(time.TotalMinutes);
+            Console.WriteLine(date);
+            Console.WriteLine("input date in format DD/MM/YY");
+            //DateTime userDate = DateTime.ParseExact(Console.ReadLine(), "DD / MM / YY", null);
+            DateTime userDate = DateTime.Parse(Console.ReadLine());
+            if ((userDate.DayOfWeek == DayOfWeek.Saturday)&&(userDate.DayOfWeek == DayOfWeek.Sunday))
+                Console.WriteLine("Weekend " + userDate.DayOfWeek);
+            else
+                Console.WriteLine("Work hard " +  userDate.DayOfWeek);
             Console.ReadLine();
         }
     }
