@@ -17,6 +17,15 @@ namespace Lesson4.Classes
             date = DateTime.UtcNow;
             Console.WriteLine(date);
             Console.WriteLine(DateTime.MinValue);
+            date = DateTime.Now;
+            Console.WriteLine(date.Day);
+            Console.WriteLine(date.DayOfWeek);
+            date = new DateTime(2016, 03, 05, 14, 54, 01);
+            Console.WriteLine(date.ToShortDateString());
+            Console.WriteLine(DateTime.Now - date);
+
+            date = DateTime.Parse("04/05/99 14:54");
+            Console.WriteLine(date);
 
 
             Console.ReadLine();
